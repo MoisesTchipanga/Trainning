@@ -1,0 +1,24 @@
+h1{
+    text-shadow: 3px 3px 3px #c40000;
+}
+.preto{
+    color: #ffff;
+    text-shadow: 2px 3px 4px #000000;
+}
+
+.multipla{
+    text-shadow: 3px 2px 5px #e91c1c, 2px 5px 2px #e6d70e;
+}
+
+.caixa{
+    width: 50%;
+    height: 300px;
+    background: #e3e3f0;
+    box-shadow: 3px 4px 5px #000000;
+    background-image: url("../img/pexels-hebaysal-773471.jpg");
+    background-size: cover;
+    color: #ffff;
+    text-align: center;
+    font-size:50px;
+
+}
