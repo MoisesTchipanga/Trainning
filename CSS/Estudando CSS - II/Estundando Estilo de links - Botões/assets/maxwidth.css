@@ -1,0 +1,33 @@
+
+
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.ex1{
+    border: 1px solid #ff0000;
+    max-width: 800px;
+}
+
+div.ex2{
+    border: 1px solid #ff0000;
+    max-width: 800px;
+}
+
+p{
+    text-align: justify;
+}
+
+a.botao{
+    border-radius: 50px;
+    background-color: #000000;
+    text-decoration: none;
+    color: #ff0000;
+    padding: 5px;
+}
+
+a.botao:hover{
+    background-color: #303030;
+    border-bottom: 1px solid #ff0000;
+}
