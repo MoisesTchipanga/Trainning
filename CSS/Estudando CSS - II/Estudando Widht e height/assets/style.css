@@ -1,0 +1,9 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.teste{
+    max-width: 800px;
+    height: 150px;
+    background-color: #44ffff;
+}
