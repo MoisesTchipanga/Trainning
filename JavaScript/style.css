@@ -10,6 +10,7 @@ h1{
 }
 
 #will{
+    margirn-left: 100px;
     width: 50%;
     height: 200px;
     background-size: cover;
@@ -76,7 +77,7 @@ img{
 
 #botao4{
     border-radius: 30px;
-    background-color: #44ffff;
+    background-color: #398888;
     color: white;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
@@ -94,3 +95,42 @@ img{
     color: white;
 }
 
+#historico{
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+#lista-historico{
+    margin: 4px;
+    padding: 2px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: slideIn 0,3s ease;
+}
+
+@keyframes slideIn{
+    from { transform: translateX(-10px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+#botao-limpar{
+    margin-left: 35px;
+    border-radius: 30px;
+    background-color: #002a61c4;
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    padding: 4px;
+}
+
+#botao-limpar:hover{
+    background-color: #0550b9c4;
+    cursor: pointer;
+}

@@ -1,3 +1,5 @@
+let historico = JSON.parse(localStorage.getItem('historico')) || [1];
+
 let contando = parseInt(localStorage.getItem('contador')) ||0;
 
 let intervalo;
@@ -50,10 +52,36 @@ document.getElementById("botao3").addEventListener("click", function() {
         }
 });
 
+function atualizarHistorico() {
+    const lista = document.getElementById("lista-historico");
+    lista.innerHTML = ''; // Limpa a lista
+    
+    // Mostra últimos 10 registros (mais recentes primeiro)
+    historico.slice(-10).reverse().forEach(registro => {
+        const div = document.createElement('div');
+        div.className = 'registro-historico';
+        div.innerHTML = `
+            <span>Valor: ${registro.valor}</span>
+            <span>${registro.data}</span>
+        `;
+        lista.prepend(div);
+    });
+
+    // Salva no localStorage
+    localStorage.setItem('historico', JSON.stringify(historico));
+}
+
 // Função para atualizar tudo
 function atualizarContador() {
     document.getElementById("numero").textContent = contando;
     localStorage.setItem('contador', contando);
+
+    historico.push({
+        valor: contando,
+        data: new Date().toLocaleTimeString()
+    });
+
+    atualizarHistorico();
 }
 
 atualizarContador();
@@ -72,6 +100,12 @@ document.getElementById("botao4").addEventListener("click", function() {
         this.textContent = "Iniciar Auto";
     }
     this.classList.toggle('ativo');
+    
+});
+
+document.getElementById("botao-limpar").addEventListener("click", () => {
+    historico = [];
+    atualizarHistorico();
 });
 
 
